@@ -12,3 +12,8 @@ function(record) {
 
 
 
+=> r.table("test").slice(5, 2, {:right_bound => "closed"})
+irb(main):006:0> r.table('test')[5...2]
+=> r.table("test").slice(5, 2, {:right_bound => "open"})
+
+
