@@ -18,3 +18,36 @@ r.db("News").table("post").insert( [{"id":"a-125","name":"Stepanov"},
 
 
 r.db("News").table("post");
+
+
+
+// Clear
+r.db("News").table("post").delete();
+
+
+// Insert
+r.db("News").table("post").insert({id:"a-121", name:"Stepanov", nomer:"123-ss"});
+
+r.db("News").table("post").insert({id:"a-125-20012014", name:"Stepanov"});
+
+r.db("News").table("post").insert( [{"id":"a-125","name":"Stepanov","nomer":"Primer"},
+                                    {"id":"a-123","name":"Stepan"},
+                                    {"id":"a-125-20012014","name":"Stepanov"},
+                                    {"id":"a-124","name":"Stepanov"}] );
+
+
+// insert
+r.db("News").table("post").insert( [{"id":"a-126","name":"Stepanov","nomer":"Primer"},
+                                    {"id":"a-127","name":"Stepan"},
+                                    {"id":"a-128-20012014","name":"Stepanov"},
+                                    {"id":"a-129","name":"Stepanov"}] );
+
+// Sort
+r.db("News").table("post").orderBy({index:"id"});
+
+// Create Index
+r.db("News").table("post").indexCreate("name");
+
+//
+r.db("News").table("post").orderBy({index:"name"});
+
