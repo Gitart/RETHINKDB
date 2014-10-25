@@ -1,4 +1,20 @@
 // Создание базы
+  r.dbCreate("News") 
 
 
 // Cоздание таблицы
+r.db("News").table_create("post")
+
+// Loads
+r.db("News").table("post").delete();
+
+r.db("News").table("post").insert({id:"a-125", name:"Stepanov"});
+r.db("News").table("post").insert({id:"a-125-20012014", name:"Stepanov"});
+r.db("News").table("post").insert( [{"id":"a-125","name":"Stepanov"},
+                                    {"id":"a-123","name":"Stepan"},
+                                    {"id":"a-125-20012014","name":"Stepanov"},
+                                    {"id":"a-124","name":"Stepanov"}] );
+
+
+
+r.db("News").table("post");
