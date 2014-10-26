@@ -51,3 +51,21 @@ r.db("News").table("post").indexCreate("name");
 //
 r.db("News").table("post").orderBy({index:"name"});
 
+/r.db("Headoffice").table("S_SUPPLIERS").delete();  
+r.db("Headoffice").table("S_SUPPLIERS");    
+r.db("Headoffice").table("S_SUPPLIERS").insert({id_sup:1, Name:'Suppliers1', Is_seles:2 });
+r.db("Headoffice").table("S_SUPPLIERS").insert({id_sup:1, Name:'Suppliers Name 2', Is_seles:2 });
+r.db("Headoffice").table("S_SUPPLIERS").insert({id_sup:1, 
+                                                Name:'Suppliers Name 3',                                                                                  Is_seles:1,                          //dd
+                                                Price:123.78,
+  Name_ext: "Name ext"
+                                                                       });
+
+// Create Index
+r.db("Headoffice").table("S_SUPPLIERS").orderBy("Name");    
+// Create Index
+//r.db("Headoffice").table("S_SUPPLIERS").indexCreate("Is_seles");
+//   
+r.db("Headoffice").table("S_SUPPLIERS").orderBy({index: r.desc("Is_seles")});  
+
+r.expr({a:"b"}).merge({b:[5,2,7]})
