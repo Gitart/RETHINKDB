@@ -1,6 +1,6 @@
 
-r.dbCreate("Headoffice")
-r.db("Headoffice").tableCreate("S_SUPPLIERS") 
+r.dbCreate("Headoffice");
+r.db("Headoffice").tableCreate("S_SUPPLIERS") ;
 r.table("S_SUPPLIERS").insert({id:1,
 	                           ID_CONTRACTORS: 1,
                                NAME:         "Name Contractors",
@@ -18,6 +18,6 @@ r.table("S_SUPPLIERS").insert({id:1,
                                MIN_SUM INT:  1 ,  // Минимальная сумма заказа
                                MIN_DAY INT:  1,   // Минимальная срок поставки в днях
                                COMMENTS:    "",   // VARCHAR(255)) -- Коментарии 
-                               })
+                               });
 
-r.table("S_SUPPLIERS").delete()
+//r.table("S_SUPPLIERS").delete()
