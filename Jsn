@@ -1,7 +1,7 @@
 {
-id:      "7644aaf2-9928-4231-aa68-4e65e31bf219",
-title:    "The line must be drawn here",
-content:  "This far, no further! ...",
-category: "Fiction" 
+  id:      "7644aaf2-9928-4231-aa68-4e65e31bf219",
+  title:    "The line must be drawn here",
+  content:  "This far, no further! ...",
+  category: "Fiction" 
 }
                                    
