@@ -1,16 +1,1 @@
-[ {"id": 100123,  "name": "Test1 2228-A",  "price": 2000},
-  {"id": 100124,  "name": "Test1 2228-B",  "price": 3000},
-  {"id": 100125,  "name": "Test1 2228-C",  "price": 4000},
-  {"id": 100126,  "name": "Test1 2228-D",  "price": 5000},  
-  {"id": 100127,  "name": "Test1 2228-G",  "price": 6000},
-  {"id": 100128,  "name": "Test1 2228-H",  "price": 7000},
-  {"id": 100129,  "name": "Test1 2228-J",  "price": 8000},
-  {"id": 100130,  "name": "Test1 2228-K",  "price": 9000},  
-  {"id": 100131,  "name": "Test1 2228-L",  "price": 100},
-  {"id": 100132,  "name": "Test1 2228-M",  "price": 200},
-  {"id": 100133,  "name": "Test1 2228-N",  "price": 300},
-  {"id": 100134,  "name": "Test1 2228-O",  "price": 400},  
-  {"id": 100135,  "name": "Test1 2228-P",  "price": 500},
-  {"id": 100136,  "name": "Test1 2228-R",  "price": 600},
-  {"id": 100137,  "name": "Test1 2228-S",  "price": 700},
-  {"id": 100138,  "name": "Test1 2228-T",  "price": 800}]
+[{"id": 100123,"name":"Test1 2228-A","price":2000},{"id": 100124,"name":"Test1 2228-B","price": 3000},{"id":100125,"name":"Test1 2228-C",  "price": 4000},{"id": 100126,"name": "Test1 2228-D","price": 5000},{"id": 100127,"name": "Test1 2228-G","price": 6000},{"id": 100128,  "name": "Test1 2228-H","price": 7000},{"id": 100129,"name":"Test1 2228-J","price": 8000},{"id":100130,"name":"Test1 2228-K","price": 9000},{"id": 100131,"name": "Test1 2228-L","price": 100},{"id":100132,"name":"Test1 2228-M",  "price": 200},{"id":100133, "name":"Test1 2228-N","price": 300},{"id": 100134,"name":"Test1 2228-O","price": 400},{"id":100135,"name":"Test1 2228-P","price": 500},{"id": 100136,"name":"Test1 2228-R","price": 600},{"id":100137,"name":"Test1 2228-S","price":700},{"id":100138,"name": "Test1 2228-T","price": 800}]
