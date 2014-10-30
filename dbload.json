@@ -1,6 +1,4 @@
-
-[
-  {"id": 100123,  "name": "Test1 2228-A",  "price": 2000},
+[ {"id": 100123,  "name": "Test1 2228-A",  "price": 2000},
   {"id": 100124,  "name": "Test1 2228-B",  "price": 3000},
   {"id": 100125,  "name": "Test1 2228-C",  "price": 4000},
   {"id": 100126,  "name": "Test1 2228-D",  "price": 5000},  
@@ -15,6 +13,4 @@
   {"id": 100135,  "name": "Test1 2228-P",  "price": 500},
   {"id": 100136,  "name": "Test1 2228-R",  "price": 600},
   {"id": 100137,  "name": "Test1 2228-S",  "price": 700},
-  {"id": 100138,  "name": "Test1 2228-T",  "price": 800}
-]
-
+  {"id": 100138,  "name": "Test1 2228-T",  "price": 800}]
