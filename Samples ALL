@@ -1,3 +1,6 @@
+//https://gowalker.org/github.com/dancannon/gorethink#_exams
+
+
 type Person struct {
     Id        string `gorethink:"id, omitempty"`
     FirstName string `gorethink:"first_name"`
