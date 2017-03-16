@@ -1,13 +1,13 @@
 ---
-layout: documentation
-title: "Technical comparison: RethinkDB and MongoDB"
-active: docs
+layout:      documentation
+title:       "Technical comparison: RethinkDB and MongoDB"
+active:      docs
 docs_active: comparison-tables
-permalink: docs/comparison-tables/
-alias: docs/comparisons/mongodb/
+permalink:   docs/comparison-tables/
+alias:       docs/comparisons/mongodb/
 ---
 
-{% infobox info %}
+{% infoboxinfo %}
 <strong>Interested in a more personal perspective?</strong> Read our take on <a
 href="/docs/rethinkdb-vs-mongodb/">what makes RethinkDB different</a>.
 {% endinfobox %}
