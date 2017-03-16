@@ -8,14 +8,10 @@ https://www.reddit.com/r/golang/new.json
    r.db("test").table("all")("data")("children").nth(0)("data")("preview")("images").nth(0)("resolutions").nth(0)
 ```  
 
-## Sample wit filtered
+## Sample with filtered
 ```Javascript
 r.db("test").table("all")("data")("children").nth(0)("data").filter({author:"cujax"})
 ```
-
-    
-
-
 
 
 ## Rethinkdb Command
