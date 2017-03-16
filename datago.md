@@ -1,11 +1,20 @@
 
 
-## Read data with 
+## Read data with RetinkDB 
 Чтение глубокой ветки в сложной структуре
 https://www.reddit.com/r/golang/new.json
+
 ```Javascript
    r.db("test").table("all")("data")("children").nth(0)("data")("preview")("images").nth(0)("resolutions").nth(0)
 ```  
+
+## Sample wit filtered
+```Javascript
+r.db("test").table("all")("data")("children").nth(0)("data").filter({author:"cujax"})
+```
+
+    
+
 
 
 
