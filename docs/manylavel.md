@@ -33,7 +33,7 @@ r.db("slbc").table("clients").insert(r.http("http://172.125.164.116:7777/report/
 r.db("slbc")
  .table("tasks")
  .get("fb09f477-d013-4682-8227-d53cc2ed9b14")("annotations")
- .map({"ddd":r.row("description")})
+ .map({"Description":r.row("description")})
 
 // Заполнение таблицы
 r.db("slbc")
