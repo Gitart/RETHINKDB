@@ -3,17 +3,14 @@
 # Многоуровневая система
 
 ```javascript
-r.db("slbc").table("reports")
- .count()
+r.db("slbc").table("reports").count()
   .delete()
   
-r.db("slbc").table("tasks")
-  .delete()
+r.db("slbc").table("tasks").delete()
   
-r.db("slbc")
-  .table("clients")
-  .insert(r.http("http://172.25.64.16:5555/report/data/clients.json"))
-  //.delete()
+// Загрузка клиентов  
+r.db("slbc").table("clients").insert(r.http("http://172.25.64.16:5555/report/data/clients.json"))
+  
   
   .update({"BudgetAA":r.row("BudgetAA").coerceTo("number")})
   //.insert(r.http("http://172.25.64.16:5555/report/data/clients.json"))
