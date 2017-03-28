@@ -29,11 +29,16 @@ r.db("slbc").table("clients").insert(r.http("http://172.125.164.116:7777/report/
 ## Доступ ко второму уровню
 
 ```javascript
-r.db("slbc").table("tasks").get("fb09f477-d013-4682-8227-d53cc2ed9b14")("annotations")
-  .map({"ddd":r.row("description")})
-  
-  
-  .insert({
+
+r.db("slbc")
+ .table("tasks")
+ .get("fb09f477-d013-4682-8227-d53cc2ed9b14")("annotations")
+ .map({"ddd":r.row("description")})
+
+// Заполнение таблицы
+r.db("slbc")
+ .table("tasks")
+ .insert({
    "annotations" : [
       {
         "id"          : 1,
