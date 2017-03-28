@@ -28,4 +28,27 @@ r.db("slbc")
     
  ```
     
-    
+
+## Доступ ко второму уровню
+
+```javascript
+r.db("slbc").table("tasks").get("fb09f477-d013-4682-8227-d53cc2ed9b14")("annotations")
+  .map({"ddd":r.row("description")})
+  
+  
+  .insert({
+   "annotations" : [
+      {
+        "id"          : 1,
+        "job_id"      : 42,
+        "description" : "foo bar",
+        "url"         : "http://example.com/job-42",
+        "status"      : "passed"
+      }
+   ]
+})
+```
+
+  
+  
+
