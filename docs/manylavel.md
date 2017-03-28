@@ -9,7 +9,7 @@ r.db("slbc").table("reports").count()
 r.db("slbc").table("tasks").delete()
   
 // Загрузка клиентов  
-r.db("slbc").table("clients").insert(r.http("http://172.25.64.16:5555/report/data/clients.json"))
+r.db("slbc").table("clients").insert(r.http("http://172.25.64.16:7777/report/data/clients.json"))
   
   
   .update({"BudgetAA":r.row("BudgetAA").coerceTo("number")})
