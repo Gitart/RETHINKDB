@@ -1,6 +1,8 @@
 
 
 # Многоуровневая система
+[Sample for kinopoisk](GET http://kparser.pp.ua/json/film/7988)
+
 
 ```javascript
 r.db("slbc").table("reports").count()
