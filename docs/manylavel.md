@@ -1,7 +1,7 @@
 
 
 # Многоуровневая система
-[Sample for kinopoisk](http://kparser.pp.ua/json/film/7988)
+[Sample JSON file for kinopoisk](http://kparser.pp.ua/json/film/7988)
 
 
 ```javascript
