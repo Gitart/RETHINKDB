@@ -16,3 +16,13 @@ sudo pip install rethinkdb
 sudo apt upgrade
 sudo apt update
 ```
+
+
+## Backup DB test
+
+```bash
+rethinkdb dump -c localhost:28015 -f db.dmp -e test
+```
+
+### Path to backup file
+home/user/db.dmp 
