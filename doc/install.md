@@ -45,6 +45,7 @@ sudo /etc/init.d/rethinkdb restart
 
 ```bash
 rethinkdb dump -c localhost:28015 -f dball.dmp
+rethinkdb dump -c localhost:28016 -f /Users/UnixRoot/Desktop/backup.zip
 ```
 
 ## Backup DB test
@@ -55,6 +56,34 @@ rethinkdb dump -c localhost:28015 -f db.dmp -e test
 
 ### Path to backup file
 home/user/db.dmp 
+
+
+# Performing automatic backups
+
+#### backupdb.sh
+```bash
+#!/bin/bash
+
+echo "($(date -u)) Starting RethinkDB daily backup"
+/usr/local/bin/rethinkdb-dump -f /etc/rethinkdbbackup/backup_."$(date)".zip
+echo "($(date -u)) Finished creating backup"
+```
+
+```
+sudo chmod +x shellfile.sh
+```
+
+### Crontab
+Просомтр текущих заданий
+```
+crontab -e
+```
+
+Now we will add our cron code; here it is:
+
+```
+00 00 * * * /Users/UnixRoot/Desktop/backup.sh >>/Users/UnixRoot/Desktop/backup.log
+```
 
 
 # RESTORE
@@ -72,7 +101,16 @@ home/user/db.dmp
 
 ```bash
 rethinkdb restore  db.dmp --force
+rethinkdb dump -c localhost:28016 -e company.employees -f  /Users/UnixRoot/Desktop/backup.zip
 ```
+
+
+# Import data
+
+```
+rethinkdb import -f user.json --table test.users --pkey id
+```
+
 
 # Cluster
 ```bash
