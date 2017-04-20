@@ -18,6 +18,13 @@ sudo apt update
 ```
 
 
+# BACKUP DATABASE
+## Backup All Databases in one file
+
+```bash
+rethinkdb dump -c localhost:28015 -f dball.dmp
+```
+
 ## Backup DB test
 
 ```bash
