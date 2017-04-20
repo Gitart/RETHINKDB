@@ -74,4 +74,11 @@ home/user/db.dmp
 rethinkdb restore  db.dmp --force
 ```
 
+# Cluster
+```bash
+rethinkdb --port-offset 1 --directory rethinkdb_data2 --join localhost:29015
+```
+
+
+
 [Генерация JSON](https://www.mockaroo.com/schemas/download)
