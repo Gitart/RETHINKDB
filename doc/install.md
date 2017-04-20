@@ -112,11 +112,30 @@ rethinkdb import -f user.json --table test.users --pkey id
 ```
 
 # Export
+
+Экспорт в JSON тлоько таблицы ***People*** из базы данных ***test***
 ```
 rethinkdb export -c localhost:28015  --e test.People
 ```
 Будет сформирована директоррия   
 rethinkdb_export_2017-04-20T09:46:23
+
+
+Экспорт в JSON всех таблиц из базы данных ***test***
+```
+rethinkdb export -c localhost:28015  --e test
+```
+Будет сформирована директоррия   
+rethinkdb_export_2017-04-20T09:46:23
+
+
+Экспорт в JSON всех таблиц из базы данных ***test*** в папку back
+папка будет сформирована автоматически
+
+```
+rethinkdb export -c localhost:28015  --e test -d back
+```
+
 
 
 
