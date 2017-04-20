@@ -84,6 +84,26 @@ rethinkdb --join 104.121.23.24:29015 --bind all
 ```
 
 
+By executing the rethinkdb command as follows:
+
+```bash
+sudo /etc/init.d/rethinkdb restart
+```
+
+By using the service command as follwos:
+
+```bash
+sudo service rethinkdb restart
+```
+
+
+By using the systemctl command as follows:
+
+```bash
+sudo systemctl rethinkdb restart
+```
+
+
 
 
 
