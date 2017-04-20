@@ -53,3 +53,16 @@ rethinkdb dump -c localhost:28015 -f db.dmp -e test
 
 ### Path to backup file
 home/user/db.dmp 
+
+
+# RESTORE
+
+Восстановление из Бекапа
+с --force
+будут добавлены в конец таблиц
+Будут восстановлены из архива те базы которые там были в архиве!
+
+
+```bash
+rethinkdb restore  db.dmp --force
+```
