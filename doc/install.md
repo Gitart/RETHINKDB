@@ -79,6 +79,12 @@ rethinkdb restore  db.dmp --force
 rethinkdb --port-offset 1 --directory rethinkdb_data2 --join localhost:29015
 ```
 
+```bash
+rethinkdb --join 104.121.23.24:29015 --bind all
+```
+
+
+
 
 
 [Генерация JSON](https://www.mockaroo.com/schemas/download)
