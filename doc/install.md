@@ -111,6 +111,15 @@ rethinkdb dump -c localhost:28016 -e company.employees -f  /Users/UnixRoot/Deskt
 rethinkdb import -f user.json --table test.users --pkey id
 ```
 
+# Export
+```
+rethinkdb export -c localhost:28015  --e test.People
+```
+Будет сформирована директоррия   
+rethinkdb_export_2017-04-20T09:46:23
+
+
+
 
 # Cluster
 ```bash
