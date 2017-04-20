@@ -1,4 +1,5 @@
-## Install RethinkDB
+# Install RethinkDB
+
 
 ```bash
 source /etc/lsb-release && echo "deb http://download.rethinkdb.com/apt $DISTRIB_CODENAME main" | sudo tee /etc/apt/sources.list.d/rethinkdb.list
@@ -7,7 +8,7 @@ sudo apt-get update
 sudo apt-get install rethinkdb
 ```
 
-## Python driver
+## Install Python driver
 For backup and manage database need install Python Driver.
 
 ```bash
