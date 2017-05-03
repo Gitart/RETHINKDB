@@ -55,7 +55,17 @@ r.db("Bar").table("regions")
    .merge({"Cities":r.db("Bar").table("cities").filter({"region_id":"1"}).coerceTo('array')})
 ```
 
-   
+### Json Output
+
+```json
+
+{
+"Cities": [ ... ] ,
+"id":  "1" ,
+"name":  "АР Крым"
+}
+``` 
+  
    
    
     
