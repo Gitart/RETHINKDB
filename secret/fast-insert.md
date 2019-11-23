@@ -57,8 +57,8 @@ type Mil []int64
  *   Initialisation Service
  * 	 Date         : 2015-03-11
  *	 Description  : Initialization DB Connect
- *   Author       : SAVCHENKO ARTHUR 
- *   ☎           : 8-097-5547468
+ *   Author       :
+ *   ☎           : 
  *
  ****************************************************************************************************************************************/
 func Dbini() {
