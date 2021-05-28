@@ -35,37 +35,30 @@ func DBini(){
 	session.SetMaxOpenConns(200)
 	session.SetMaxIdleConns(200)
     
-    fmt.Println("CONNECTION to DB...")
+        fmt.Println("CONNECTION to DB...")
 	Cnn = append(Cnn, session)
 }
-
-
-
-
 
 // Start service func
 func main(){
      DBini()
-
-    Port:= flag.String("p", "1968",   "Input Port")                      // Port by default
-    flag.Parse()
+     Port:= flag.String("p", "1968",   "Input Port")                      // Port by default
+     flag.Parse()
   
-	http.HandleFunc("/",                             StartPage)     // Start page
-	http.HandleFunc("/news/",                        TemplateNews)  // test page
-	http.HandleFunc("/add/",                         AddNews)       // Add data
-
-
-	srv := &http.Server{Addr        : ":" + *Port, 
-                      IdleTimeout : 120 * time.Second, 
-                      ReadTimeout : 10  * time.Second, 
-                      WriteTimeout: 10  * time.Second}
+     http.HandleFunc("/",                             StartPage)     // Start page
+     http.HandleFunc("/news/",                        TemplateNews)  // test page
+     http.HandleFunc("/add/",                         AddNews)       // Add data
+     
+     srv := &http.Server{Addr        : ":" + *Port, 
+                IdleTimeout : 120 * time.Second, 
+                ReadTimeout : 10  * time.Second, 
+                WriteTimeout: 10  * time.Second}
                       
-                      fmt.Println("server was strted in port :", *Port)
+     fmt.Println("server was strted in port :", *Port)
 
-                      if err := srv.ListenAndServe(); err != nil {
-                          log.Println(err)
-                      }
-
+     if err := srv.ListenAndServe(); err != nil {
+        log.Println(err)
+     }
 }
 
 //************************************************************
@@ -73,7 +66,7 @@ func main(){
 //************************************************************
 func StartPage(w http.ResponseWriter, r *http.Request) {
 	t := `<html>
-	    Сайт сформирован в директории 
+        Сайт сформирован в директории 
         <b>out</b>. 
         Готов к заливке на сайт. 
         <b>Arttech.inf.ua</b>
@@ -81,15 +74,12 @@ func StartPage(w http.ResponseWriter, r *http.Request) {
   
   log.Println("Сайт сформирован.")
   w.Write([]byte(t))
-
-  
 }
 
 //************************************************************
 // Вывод сообщений
 //************************************************************
 func TemplateNews(w http.ResponseWriter, r *http.Request) {
-	
 	IOptc := Db.InsertOpts{Durability: "soft"}
 
 	// Cтруктура
@@ -114,7 +104,6 @@ if errst != nil {
    w.WriteHeader(208)
    return
 } 
-
  log.Println("Вставка данных произошла успешно.")
 }
 
@@ -123,10 +112,9 @@ if errst != nil {
 // Вывод сообщений
 //************************************************************
 func AddNews (w http.ResponseWriter, r *http.Request) {
-    
 	IOptc := Db.InsertOpts{Durability: "soft"}
 
-    // Чтение тела документа
+	// Чтение тела документа
 	reads, _ := ioutil.ReadAll(r.Body)
 	defer r.Body.Close()
 
@@ -147,7 +135,6 @@ func AddNews (w http.ResponseWriter, r *http.Request) {
 
     var m []Mst
 
-
 	// Cтрогая опредленная структура заранее
 	// m := DocHeader{}
 	errj := json.Unmarshal([]byte(reads), &m)
@@ -158,10 +145,7 @@ func AddNews (w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fmt.Println("-->",m)	
-
-
-
+ 	 fmt.Println("-->",m)	
 	 Db.DB("wrk").Table("settings").Insert(m, IOptc).Run(Cnn[0])
 	 fmt.Println("OK...")
 	 w.WriteHeader(200)
@@ -172,7 +156,6 @@ func AddNews (w http.ResponseWriter, r *http.Request) {
         <b>Arttech.inf.ua</b>
         </html>`
   
-  log.Println("Сайт сформирован.")
-  w.Write([]byte(t))
-
+        log.Println("Сайт сформирован.")
+        w.Write([]byte(t))
 }
